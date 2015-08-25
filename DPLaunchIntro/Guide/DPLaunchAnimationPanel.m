@@ -101,7 +101,7 @@ static DPLaunchAnimationPanel *launchAnimtionPanel = nil;
     [UIView setAnimationTransition:UIViewAnimationTransitionNone forView:self cache:YES];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(launchTransitionDone)];
-    backgroundView.alpha = 0.5f;
+    backgroundView.alpha = 0.f;
     [UIView commitAnimations];
 }
 
