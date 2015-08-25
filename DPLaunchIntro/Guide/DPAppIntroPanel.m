@@ -213,7 +213,7 @@ static DPAppIntroPanel *_appIntroPanel = nil;
 //    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
 //    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 //    [userDefaults setObject:@(1) forKey:[NSString stringWithFormat:@"%@-%@", DPAppIntroPage, version]];
-//    [userDefaults setInteger:mCurrentPage forKey:DPAppIntroDisplayedPage];
+//    [userDefaults setInteger:0 forKey:DPAppIntroDisplayedPage];
 //    [userDefaults synchronize];
     [self dismiss];
 }
