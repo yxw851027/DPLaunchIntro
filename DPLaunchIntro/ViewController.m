@@ -17,6 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:self.view.bounds];
+    label.textColor = [UIColor  blackColor];
+    label.font = [UIFont systemFontOfSize:24];
+    label.text = @"这里是主页面!\nHere is main viewcontroller";
+    label.textAlignment = NSTextAlignmentCenter;
+    label.numberOfLines = 0;
+    [self.view addSubview:label];
 }
 
 - (void)didReceiveMemoryWarning {

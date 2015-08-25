@@ -7,16 +7,30 @@
 //
 
 #import "AppDelegate.h"
+#import "DPLaunchAnimationPanel.h"
+#import "DPAppIntroPanel.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+@synthesize window;
+@synthesize rootViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    rootViewController = [[ViewController alloc] init];
+    window.rootViewController = rootViewController;
+    [window makeKeyAndVisible];
+    
+    //显示启动动画
+    [DPLaunchAnimationPanel displayWithCompleteBlock:^{
+        //显示引导页
+        [DPAppIntroPanel displayIfNeeded];
+    }];
+    
     return YES;
 }
 
