@@ -215,6 +215,7 @@ static DPAppIntroPanel *_appIntroPanel = nil;
 //    [userDefaults setObject:@(1) forKey:[NSString stringWithFormat:@"%@-%@", DPAppIntroPage, version]];
 //    [userDefaults setInteger:0 forKey:DPAppIntroDisplayedPage];
 //    [userDefaults synchronize];
+    
     [self dismiss];
 }
 
