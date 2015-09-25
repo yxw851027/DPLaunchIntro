@@ -27,6 +27,7 @@ static DPLaunchAnimationPanel *launchAnimtionPanel = nil;
 {
     if (launchAnimtionPanel == nil) {
         launchAnimtionPanel = [[DPLaunchAnimationPanel alloc] init];
+        launchAnimtionPanel.rootViewController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
     }
     launchAnimtionPanel.block = aBlock;
     [launchAnimtionPanel show];

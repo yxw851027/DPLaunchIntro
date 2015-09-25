@@ -179,6 +179,7 @@
         [UIView animateWithDuration:1.f animations:^{
             [joinButton layoutIfNeeded];
             [textImageView layoutIfNeeded];
+            [self layoutIfNeeded];
         }completion:^(BOOL finish){
             animating = NO;
         }];
@@ -209,6 +210,7 @@
     
     [joinButton layoutIfNeeded];
     [textImageView layoutIfNeeded];
+    [self layoutIfNeeded];
 }
 
 @end

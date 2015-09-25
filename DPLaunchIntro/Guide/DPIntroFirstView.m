@@ -191,6 +191,7 @@
             itemImageView.transform = CGAffineTransformMakeScale(1.f, 1.f);
             [titleImageView layoutIfNeeded];
             [textImageView layoutIfNeeded];
+            [self layoutIfNeeded];
         }completion:^(BOOL finish){
             animating = NO;
             itemImageView.transform = CGAffineTransformIdentity;
@@ -225,6 +226,7 @@
     
     [titleImageView layoutIfNeeded];
     [textImageView layoutIfNeeded];
+    [self layoutIfNeeded];
 }
 
 - (void)playIntroduceVideo

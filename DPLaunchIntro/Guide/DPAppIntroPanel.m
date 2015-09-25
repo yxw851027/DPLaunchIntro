@@ -56,6 +56,7 @@ static DPAppIntroPanel *_appIntroPanel = nil;
                 _appIntroPanel = [[DPAppIntroPanel alloc] initWithCurrentPage:0];
             }
         }
+        _appIntroPanel.rootViewController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
         [_appIntroPanel show];
     }
     return show;
@@ -194,6 +195,7 @@ static DPAppIntroPanel *_appIntroPanel = nil;
 #pragma mark - methods
 - (void)show {
     [self setHidden:NO];
+    self.rootViewController = nil;
     [self reloadPageViews];
 }
 
